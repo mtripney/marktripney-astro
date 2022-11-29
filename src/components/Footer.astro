@@ -1,17 +1,15 @@
 ---
 import Social from "./Social.astro";
+import mastodonLogo from "../images/mastodon-logo.svg";
+import githubLogo from "../images/github-logo.png";
+
+const currentYear = new Date().getFullYear();
 ---
 
-<style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
-
-<footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+<footer
+  class="my-4 flex gap-8 align-bottom text-base text-gray-500 md:gap-10 md:text-lg"
+>
+  <p class="flex-grow">&copy; {currentYear} Mark Tripney</p>
+  <Social platform="Mastodon" username="marktripney" logo={mastodonLogo} />
+  <Social platform="GitHub" username="mtripney" logo={githubLogo} />
 </footer>

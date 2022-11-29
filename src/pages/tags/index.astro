@@ -7,10 +7,15 @@ const pageTitle = "Tag Index";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+  <h1
+    class="mb-12 text-right font-angieSans text-8xl font-semibold leading-none text-gray-900 sm:mb-10 sm:text-9xl"
+  >
+    Contact
+  </h1>
   <div class="flex flex-wrap">
     {
       tags.map((tag) => (
-        <p class="m-1 border-solid px-3 rounded-lg py-1 border border-sky-500">
+        <p class="m-1 rounded-lg border border-solid border-sky-500 px-3 py-1">
           <a href={`/tags/${tag}`}>{tag}</a>
         </p>
       ))

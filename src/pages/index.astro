@@ -1,9 +1,31 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import "@fontsource/ibm-plex-serif";
+import "@fontsource/ibm-plex-sans";
 
 const pageTitle = "Home Page";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+  <h1
+    class="mb-12 text-right font-angieSans text-8xl font-semibold leading-none text-gray-900 sm:mb-10 sm:text-9xl"
+  >
+    I'm Mark.
+  </h1>
+  <div class="space-y-6 text-gray-800">
+    <p>
+      Thanks for visiting my site. I&apos;m a front-end developer living in
+      Glasgow, Scotland, motivated by a firm belief that the web is still the
+      most effective tool we have in giving information and a voice to those who
+      need it. You can see examples of my work here.
+    </p>
+    <p>
+      I&apos;m self-taught, and still learning. To that end, I enjoy writing
+      about what I&apos;m working on and studying. You can read my posts here.
+    </p>
+    <p>
+      Want to get in touch? Great! You can find my contact details here. I look
+      forward to hearing from you!
+    </p>
+  </div>
 </BaseLayout>
