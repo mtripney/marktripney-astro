@@ -1,0 +1,12 @@
+---
+import { parseISO, format } from "date-fns";
+
+const unformattedDate = Astro.props;
+
+function Date(unformattedDate) {
+  const date = parseISO(unformattedDate.date);
+  return format(date, "LLLL d, yyyy");
+}
+---
+
+<small>Posted on {Date(unformattedDate)}.</small>

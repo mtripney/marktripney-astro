@@ -1,10 +1,12 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import DateHandler from "../components/DateHandler.astro";
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <p>{frontmatter.pubDate.slice(0, 10)}</p>
+  <h1 class="text-6xl">{frontmatter.title}</h1>
+  <DateHandler date={frontmatter.pubDate.slice(0, 10)} />
   <p><em>{frontmatter.description}</em></p>
   <p>Written by: {frontmatter.author}</p>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
